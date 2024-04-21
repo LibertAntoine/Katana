@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  mitium-nginx:
+    image: nginx:1.25.2-perl
+    restart: always
+    networks:
+      - traefik_network
+    volumes:
+    - ./public:/usr/share/nginx/html
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mitium.rule=Host(`keen.antoine-libert.com`)"
+      - "traefik.http.routers.mitium.entrypoints=web, websecure"
+      - "traefik.http.routers.mitium.tls=true"
+      - "traefik.http.routers.mitium.tls.certresolver=letsencrypt"
+      - "traefik.http.services.mitium.loadbalancer.server.port=80"
+
+networks:
+  traefik_network:
+    external: true

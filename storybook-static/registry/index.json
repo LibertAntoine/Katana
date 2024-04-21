@@ -1,0 +1,28 @@
+[
+  {
+    "name": "alert",
+    "dependencies": [],
+    "registryDependencies": [
+      "utils"
+    ],
+    "files": [
+      "ui/alert/Alert.vue",
+      "ui/alert/AlertDescription.vue",
+      "ui/alert/AlertTitle.vue",
+      "ui/alert/index.ts"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "badge",
+    "dependencies": [],
+    "registryDependencies": [
+      "utils"
+    ],
+    "files": [
+      "ui/badge/Badge.vue",
+      "ui/badge/index.ts"
+    ],
+    "type": "components:ui"
+  }
+]
