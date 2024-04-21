@@ -8,7 +8,7 @@ jobs:
   Deploy-Keen-Container:
     runs-on: ubuntu-latest
     env:
-      REMOTE_VOLUME_DIR: /volume1/docker/keen/
+      REMOTE_VOLUME_DIR: /volume1/docker/keen
       DOCKER_COMPOSE_PATH: /usr/local/bin/docker-compose
     steps:
       - uses: actions/checkout@v3
