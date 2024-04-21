@@ -1,0 +1,17 @@
+import{w as h,e as s,u as v}from"./index-BASH1HpE.js";import{d as w,k as y,o as f,b,l as B,j as _}from"./vue.esm-bundler-BdP0x0pZ.js";import{_ as k}from"./Header-B7eLxK6E.js";const x=_('<section class="storybook-page"><h2>Pages in Storybook</h2><p> We recommend building UIs with a <a href="https://componentdriven.org" target="_blank" rel="noopener noreferrer"><strong>component-driven</strong></a> process starting with atomic components and ending with pages. </p><p> Render pages with mock data. This makes it easy to build and review page states without needing to navigate to them in your app. Here are some handy patterns for managing page data in Storybook: </p><ul><li> Use a higher-level connected component. Storybook helps you compose such data from the &quot;args&quot; of child component stories </li><li> Assemble data in the page component from your services. You can mock these services out using Storybook. </li></ul><p> Get a guided tutorial on component-driven development at <a href="https://storybook.js.org/tutorials/" target="_blank" rel="noopener noreferrer">Storybook tutorials</a> . Read more in the <a href="https://storybook.js.org/docs" target="_blank" rel="noopener noreferrer">docs</a> . </p><div class="tip-wrapper"><span class="tip">Tip</span> Adjust the width of the canvas with the <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z" id="a" fill="#999"></path></g></svg> Viewports addon in the toolbar </div></section>',1),r=w({__name:"Page",setup(c){const e=y(null),t=()=>{e.value={name:"Jane Doe"}},a=()=>{e.value=null},d=()=>{e.value={name:"Jane Doe"}};return(I,L)=>(f(),b("article",null,[B(k,{user:e.value,onLogin:t,onLogout:a,onCreateAccount:d},null,8,["user"]),x]))}});r.__docgenInfo={exportName:"default",displayName:"Page",description:"",tags:{},sourceFiles:["/home/liberta/web-projects/Katana/stories/Page.vue"]};const V={title:"Example/Page",component:r,render:()=>({components:{MyPage:r},template:"<my-page />"}),parameters:{layout:"fullscreen"},tags:["autodocs"]},o={play:async({canvasElement:c})=>{const e=h(c),t=e.getByRole("button",{name:/Log in/i});await s(t).toBeInTheDocument(),await v.click(t),await s(t).not.toBeInTheDocument();const a=e.getByRole("button",{name:/Log out/i});await s(a).toBeInTheDocument()}},n={};var i,l,p;o.parameters={...o.parameters,docs:{...(i=o.parameters)==null?void 0:i.docs,source:{originalSource:`{
+  play: async ({
+    canvasElement
+  }: any) => {
+    const canvas = within(canvasElement);
+    const loginButton = canvas.getByRole('button', {
+      name: /Log in/i
+    });
+    await expect(loginButton).toBeInTheDocument();
+    await userEvent.click(loginButton);
+    await expect(loginButton).not.toBeInTheDocument();
+    const logoutButton = canvas.getByRole('button', {
+      name: /Log out/i
+    });
+    await expect(logoutButton).toBeInTheDocument();
+  }
+}`,...(p=(l=o.parameters)==null?void 0:l.docs)==null?void 0:p.source}}};var u,g,m;n.parameters={...n.parameters,docs:{...(u=n.parameters)==null?void 0:u.docs,source:{originalSource:"{}",...(m=(g=n.parameters)==null?void 0:g.docs)==null?void 0:m.source}}};const E=["LoggedIn","LoggedOut"];export{o as LoggedIn,n as LoggedOut,E as __namedExportsOrder,V as default};

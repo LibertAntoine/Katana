@@ -30,6 +30,7 @@ jobs:
 
       - name: Copy files via rsync (SSH)
         run: |
+          ls -la deploy
           rsync -avzr --delete deploy/dist  ${{ secrets.REMOTE_USER }}@${{ secrets.SSH_HOST }}:${{ env.REMOTE_VOLUME_DIR }}/public
           rsync -avzr --delete deploy/docker-compose.yml  ${{ secrets.REMOTE_USER }}@${{ secrets.SSH_HOST }}:${{ env.REMOTE_VOLUME_DIR }}
 
