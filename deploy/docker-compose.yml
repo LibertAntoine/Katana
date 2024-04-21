@@ -1,7 +1,7 @@
 version: "3.3"
 
 services:
-  mitium-nginx:
+  keen-nginx:
     image: nginx:1.25.2-perl
     restart: always
     networks:
@@ -10,11 +10,11 @@ services:
     - ./public:/usr/share/nginx/html
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.mitium.rule=Host(`keen.antoine-libert.com`)"
-      - "traefik.http.routers.mitium.entrypoints=web, websecure"
-      - "traefik.http.routers.mitium.tls=true"
-      - "traefik.http.routers.mitium.tls.certresolver=letsencrypt"
-      - "traefik.http.services.mitium.loadbalancer.server.port=80"
+      - "traefik.http.routers.keen.rule=Host(`keen.antoine-libert.com`)"
+      - "traefik.http.routers.keen.entrypoints=web, websecure"
+      - "traefik.http.routers.keen.tls=true"
+      - "traefik.http.routers.keen.tls.certresolver=letsencrypt"
+      - "traefik.http.services.keen.loadbalancer.server.port=80"
 
 networks:
   traefik_network:
